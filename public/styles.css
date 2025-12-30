@@ -1,0 +1,417 @@
+/* Färger */
+:root {
+  --pink: #f7c7de;
+  --darkgreen: #2e744f;
+  --lime: #c7f36a;
+  --white: #ffffff;
+}
+
+body {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  color: var(--darkgreen);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px 0;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========================
+   Hero Section
+======================== */
+
+/* HERO SECTION */
+.hero {
+  background-color: #f7c7de;
+  padding: 40px;
+}
+
+/* Container */ 
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Logo */
+.hero-logo img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+/* Row with image + content */
+.hero-row {
+  display: flex;
+  align-items: stretch; /* vertical alignment */
+  gap: 3rem;
+}
+
+/* Left image */
+.hero-image,
+.hero-content {
+  flex: 1;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* right div top and bottom */
+.hero-content,
+.hero-content-two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 0px; /* eller 0, beroende på layout */
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Intro text */
+.hero-intro-text {
+  max-width: 700px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.hero-intro-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-intro-text p {
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+/* FORM */
+.hero-form {
+  background-color: #c7f36a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  
+  width: 100%;
+  max-width: 600px;
+  margin: 0; 
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+
+/* Name row */
+.name-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.name-row .form-group {
+  flex: 1 1 0;           /* växer och krymper lika mycket */
+  min-width: 0;        /* viktig! låter fält krympa under flexbox */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Emailfält */
+.form-group label {
+  font-weight: bold;
+  display: flex;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+/* GDPR */ 
+.gdpr-label {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 1px;
+  margin-top: 10px;
+
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Knapp */
+.hero-form button {
+  background: var(--darkgreen);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hero-form button:hover {
+  background: #1f5034;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* Hero row staplas */
+  .hero-row {
+    flex-direction: column;  
+    gap: 32px;
+  } 
+
+  /* hero loggan */
+  .hero-logo {
+    display: flex;
+    justify-content: center;  /* centers the logo horizontally */
+    align-items: center;      /* optional: vertically centers if container has height */
+  }
+
+  .hero-logo img {
+    max-width: 150px;  /* smaller logo on mobile */
+    height: auto;
+    display: block;
+  }
+
+   /* Hero content containers */
+  .hero-content,
+  .hero-content-two {
+    max-width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  /* Text och formulär */
+  .hero-intro-text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center; 
+  }
+
+  /* formuläret */
+   .hero-form {
+    width: 100%;        
+    max-width: 400px;   
+    margin: 0 auto;     
+    text-align: left;  
+  } 
+
+  /* Name row */
+  .name-row {
+    flex-direction: column; /* staplar förnamn/efternamn på mobil */
+  }
+
+}
+
+
+/* PROBLEM SECTIONNNN */
+.problem {
+  padding: 60px 20px;
+}
+
+.problem h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--darkgreen);
+  font-weight: 700;
+}
+
+.problem-text p {
+  max-width: 900px;
+  margin: 15px auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Problem section spacing */
+.problem p:first-of-type {
+  margin-top: 30px;      /* space between h2 and first paragraph */
+}
+
+.problem p {
+  margin-bottom: 20px;   /* space between problem paragraphs */
+}
+
+/* WHY NOMSTER SECTION */
+.why-nomster {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1.5rem;
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: space-between; /* space icons evenly */
+  gap: 40px;                     /* spacing between items */
+  flex-wrap: wrap;                /* wrap on smaller screens */
+  margin-top: 40px;
+}
+
+.feature-item {
+  flex: 1 1 250px;               /* grow, shrink, base width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;           /* center icon and text */
+  gap: 15px;
+  text-align: center;
+
+  background-color: #f7c7de; /* ljusrosa bakgrund */
+  padding: 30px 20px;        /* luft inuti bubblan */
+  border-radius: 25px;       /* rundade hörn */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtil skugga */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  margin-top: 1px;
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+  .features-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .feature-item {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-carousel h2 {
+    font-size: 1.6rem;
+  }
+  .carousel-text-bubble h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Footer Section */
+.site-footer {
+  background-color: #2e744f; /* mörkgrön bakgrund */
+  color: #f7f7f7;
+  padding: 50px 20px 20px;
+  font-size: 0.95rem;
+  margin-top: 60px; /* skapar extra utrymme ovanför footern */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-width: 120px;
+}
+
+.footer-contact h4,
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #c7f36a; /* ljusgrön */
+}
+
+.footer-contact p,
+.footer-links ul li {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.footer-contact a,
+.footer-links a {
+  color: #f7f7f7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover,
+.footer-links a:hover {
+  color: #c7f36a;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(199, 243, 106, 0.3);
+  padding-top: 15px;
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin-bottom: 20px;
+  }
+}
